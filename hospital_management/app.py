@@ -131,8 +131,19 @@ def doctor_dashboard():
 def admin_dashboard():
     return render_template('admin_dashoard.html')
 
-@app.route('/forgot_password')
+@app.route('/forgot_password',methods=['GET','POST'])
 def forgot_password():
+    err_msg=None
+    if request.method=="POST":
+        email_address=request.form['email_address']
+        user=User.query.filter_by(email_address=email_address).first()
+        if user:
+            err_msg="A Confirmation link has been sent to your Email Address."
+        else:
+            err_msg="No account found with that email."
+    return render_template('forgot_password.html',err_msg=err_msg)
+
+    
     return render_template('forgot_password.html')
 
 if __name__== "__main__":
