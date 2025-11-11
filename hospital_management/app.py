@@ -140,7 +140,7 @@ def forgot_password():
         if user:
             err_msg="A Confirmation link has been sent to your Email Address."
         else:
-            err_msg="No account found with that email."
+            err_msg="No account found with that email.Try again"
     return render_template('forgot_password.html',err_msg=err_msg)
 
     
