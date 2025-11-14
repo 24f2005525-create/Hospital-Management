@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Update Doctor{% endblock %}
+
+{% block content %}
+<div class="edit-doc-container">
+    <div class="edit-doc-box">
+        <h2>Edit Doctor Details</h2>
+        <form action="{{ url_for('update_doctor', doc_id=doctor.id) }}" method="POST" class="edit-form">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" value="{{doctor.username}}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{doctor.email_address}}" required>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact" value="{{doctor.contact}}" required>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" value="{{doctor.department.name if doctor.department else ''}}" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" value="{{doctor.dob}}" required>
+
+            <button type="submit" class="save-btn">Save changes</button>
+        </form>
+        <a href="{{ url_for('doctors_page') }}" class="back-btn">Back</a>
+    </div>
+</div>
+{% endblock %}

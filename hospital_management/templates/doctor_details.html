@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Doctor Details{% endblock %}
+
+{% block content %}
+<div class="doc-detail-content">
+    <div class="doctor-detail-box">
+        <h2>Doctor Details</h2>
+        <div class="detail-card">
+            <p><strong>Name:</strong> Dr. {{ doctor.username }}</p>
+            <p><strong>Email:</strong> {{ doctor.email_address }}</p>
+            <p><strong>Contact:</strong> {{ doctor.contact }}</p>
+            <p><strong>Department:</strong> {{ doctor.department.name if doctor.department else "N/A" }}</p>
+            <p><strong>Role:</strong> {{ doctor.role }}</p>
+        </div>
+        <a href="{{ url_for('edit_doctor',doc_id=doctor.id)}}" class="doc-edit-btn">Edit</a>
+        <a href="{{ url_for('admin_dashboard') }}" class="doc-back-btn">← Back to Dashboard</a>
+        
+        
+    </div>
+</div>
+{% endblock %}

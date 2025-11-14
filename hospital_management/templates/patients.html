@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Patients{% endblock %}
+
+{% block content %}
+<div class="patient-content">
+    <div class="patient-box">
+        <h2>Manage Patients</h2>
+        <div class="Add-patients">
+            <form action="{{url_for('add_patient')}}" method="POST">
+                <input type="text" name="username" placeholder="Patient Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="contact" placeholder="Contact" required>
+                <input type="date" name="dob" required>
+                <select name="assigned_doctor">
+                    <option disabled selected>Select Doctor</option>
+                    {% for d in doctors %}
+                        <option value="{{ d.id }}">Dr. {{d.username}} </option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Add Patient</button>
+
+            </form>
+        </div>
+        <div class="patients-section">
+            <h3>Patients List</h3>
+            {% if patients %}
+                {% for p in patients %}
+                    <div class="patient-card">
+                        <p><strong>{{ p.username }}</strong></p>
+                        <p>Email: {{ p.email_address }}</p>
+                        <p>Contact: {{ p.contact }}</p>
+                        <p>Doctor: 
+                            {% if p.doctor_id %}
+                                {% for d in doctors %}
+                                    {% if d.id == p.doctor_id %}
+                                        Dr. {{ d.username }}
+                                    {% endif %}
+                                {% endfor %}
+                            {% else %}
+                                Not Assigned
+                            {% endif %}
+                        </p>
+                        <div class="patients-buttons">
+                            <a href="{{ url_for('edit_patient', patient_id=p.id) }}" class="edit-btn">Edit</a>
+
+                            <form action="{{ url_for('delete_patient', patient_id=p.id) }}" method="POST" class="delete-form">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No patients added yet.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

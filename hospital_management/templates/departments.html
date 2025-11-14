@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Manage Departments{% endblock %}
+
+{% block content %}
+<div class="Department-page-content">
+    <div class="Dept-box">
+        <h2>Manage Departments</h2>
+    </div>
+    <section class = "add_department">
+        <h3>Add Departments</h3>
+        <form action="{{  url_for('add_department')  }}" method="POST" class="dept-form">
+            <input type="text" name="dept_name" placeholder="Enter department name" required>
+            <button type="submit" class="add-btn">Add </button>
+        </form>
+    </section>
+    <section class="departments-section">
+        <h3>Departments List</h3>          
+        {% if departments %}
+        <div class="dept-list">
+            {% for d in departments %}
+            <div class="dept-card">
+                <p><strong>{{ d.name }}</strong></p>
+                <div class="dept-buttons">
+                    <a href="{{ url_for('edit_department', dept_id=d.id) }}" class="edit-btn">Edit</a>
+                    <form action="{{ url_for('delete_department',dept_id=d.id )}} " method="POST" class="delete-form">
+                        <button type="submit" class="delete-btn">Delete</button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No Departments yet</p>
+        {% endif %}
+    </section>
+</div>
+
+{% endblock %}

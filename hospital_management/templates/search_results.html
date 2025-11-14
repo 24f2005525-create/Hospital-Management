@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}All Appointments{% endblock %}
+
+{% block content %}
+<div class="search-results-box">
+    <h2>Search Results for "{{ query }}"</h2>
+
+    {% if doctors %}
+        <h3>Doctors</h3>
+        <ul>
+        {% for doc in doctors %}
+            <li>
+                <a href="{{ url_for('doctor_details', doc_id=doc.id) }}">
+                    Dr. {{ doc.username }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if patients %}
+        <h3>Patients</h3>
+        <ul>
+        {% for p in patients %}
+            <li>{{ p.username }} — {{ p.contact }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if not doctors and not patients %}
+        <p>No results found.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

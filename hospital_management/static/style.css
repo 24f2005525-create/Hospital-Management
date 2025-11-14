@@ -11,6 +11,8 @@ header {
     font-size: 24px;
 
 }
+    
+
 
 .navigation-links a {
     color: white;
@@ -28,12 +30,13 @@ header {
     width: 100%;
     font-size: 14px;
     position:fixed;
+    margin-top: 60px;
 }
 
 
 #registration
 
-.Main-Content {
+.register-box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +110,7 @@ header {
 }
 
 #login
-.Main-Content {
+.form-area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,7 +177,7 @@ header {
 
 .Login-Box a {
     color: #26a69a;
-    text-decoration: none;
+    
 }
 
 .error_message {
@@ -193,4 +196,1017 @@ header {
     padding: 35px;
     border-radius: 15px;
     border: 2px solid #86c8bc;
+}
+
+
+#admin_dashboard
+
+
+.Adm-Content {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #93d2c2;
+    
+}
+
+.Adm-Box h2 {
+    text-align: center;
+    color: #155e63;
+    margin-bottom: 10px;
+}
+
+.Intro-text {
+    text-align: center;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.admin-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* ----------------------------------------
+   OVERVIEW SECTION
+---------------------------------------- */
+.overview h3,
+.Admin-actions h3 {
+    color: #155e63;
+    font-size:40px;
+    margin-bottom: 10px;
+}
+
+.line {
+    color: black;
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align:center;
+}
+
+/* Summary outer layout */
+.summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Shared box structure */
+.summary > div {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    height: 80px;
+    border-radius: 10px;
+    border: 1px solid #d7e7e4;
+}
+
+/* Pastel gradients */
+.Doctor_summary {
+    background: linear-gradient(135deg, #d7faf1, #c3f3e7);
+}
+
+.Patient_summary {
+    background: linear-gradient(135deg, #fff7d6, #ffeeae);
+}
+
+.dept_summary {
+    background: linear-gradient(135deg, #ffe2d9, #ffd0c7);
+}
+
+
+
+/* Typography */
+.summary h4 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: #145c54;
+}
+
+.summary p {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: 700;
+    color: #0e4d47;
+}
+
+/* ----------------------------------------
+   MANAGE HOSPITAL SECTION
+---------------------------------------- */
+.Admin-actions {
+    background: #e8fbf8;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 40px;
+}
+
+.Admin-actions h3 {
+    text-align: center;
+    font-size: 26px;
+    color: #064c45;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Button container */
+.action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Standard action button */
+
+.action-buttons {
+    display: flex;
+    flex-direction: column;    /* stack vertically */
+    gap: 15px;                 /* space between buttons */
+    width: 100%;               /* full width of parent */
+    align-items: center;       /* center the buttons */
+}
+
+/* Style each button */
+.action-btn,
+.admin-button {
+    width: 60%;                /* button width (adjust if needed) */
+    text-align: center;
+    background: #126962;
+    color: white;
+    padding: 15px 0;
+    font-size: 18px;
+    border-radius: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+
+
+#Doctors_List_Section 
+/* ------------------------------------------------------
+   MAIN PAGE CONTAINER
+------------------------------------------------------ */
+.Doctor-page-content {
+    max-width: 1100px;     /* keep it wide but not too wide */
+    margin: 40px auto;     /* center the page */
+    padding: 40px;    /* THIS makes the outer margins come inside */
+}
+
+.doc-page-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 2px solid #568579;
+    margin-bottom: 50px;
+    
+}
+
+/* Page heading */
+.doc-page-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #155e63;
+}
+
+/* ------------------------------------------------------
+   ADD DOCTOR SECTION
+------------------------------------------------------ */
+.add_doctors {
+    background: #f7fffc;
+    padding: 25px;
+    border-radius: 14px;
+    border: 2px solid #568579;
+    margin-bottom: 40px;
+}
+
+.add_doctors h3 {
+    margin-bottom: 15px;
+    color: #0f645d;
+}
+
+/* Form styling */
+.doctor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    
+}
+
+.doctor-form input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #86c8bc;
+    font-size: 15px;
+}
+
+/* Add Doctor Button */
+.add-btn {
+    background: #10a69a;
+    padding: 14px;
+    color: #ffffff;
+    font-size: 17px;
+    border-radius: 10px;
+    border: 1px #86c8bc;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+
+.doctors-section h3 {
+    margin-bottom: 15px;
+    color: #0f645d;
+}
+
+/* List container */
+.doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Each doctor card */
+
+/* Doctor card wrapper */
+.doctors-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.doc-page-box {
+    max-width: 700px;       /* Make the box smaller */
+    margin: 40px auto;      /* Center horizontally */
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #93d2c2;
+    margin-bottom:100px;
+}
+
+/* Left section (doctor details) */
+.doctors-info {
+    flex: 1;
+    line-height: 1.6;
+    color: #155e63;
+}
+
+/* Right section (buttons) */
+.doctor-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 160px;       
+}
+
+/* Make BOTH <a> and <button> exactly same */
+.doctor-buttons a,
+.doctor-buttons button {
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    display: block;
+}
+
+
+
+/* Buttons */
+.view-btn, .edit-btn, .delete-btn {
+    text-align: center;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+/* Button colors */
+.view-btn {
+    background: #0a9d82;
+    color: white;
+}
+
+.edit-btn {
+    background: #4db6ac;
+    color: white;
+   
+    
+}
+
+.delete-btn {
+    background: #e57373;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Remove button outline on form submit button */
+.delete-form button {
+    border: none;
+    width:100%;
+}
+
+#Edit_Doctor_Page 
+/* Entire container centered */
+.edit-doc-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.edit-doc-box {
+    width: 85%;              /* increase width */
+    max-width: 600px;       /* allow it to stretch more */
+    margin: 30px auto;       /* center the box */
+    padding: 40px;
+    background: white;
+    border: 3px solid #2e8b8b;
+    border-radius: 12px;
+    margin-bottom:100px;
+}
+
+
+/* Heading box */
+.edit-doc-box h2 {
+    text-align: center;
+    font-size: 28px;
+    padding: 12px 0;
+    background: #ffe2e2;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+/* Input fields */
+.edit-form label {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    font-size: 18px;
+    border: 2px solid #a5d5cd;
+    border-radius: 8px;
+}
+
+/* Buttons */
+.save-btn {
+    width: 48%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #0a7a6a;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.back-btn {
+    display: block;
+    width: 45%;
+    text-align: center;
+    background:#ace3db;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* -----------------------------------------
+   DOCTOR DETAILS PAGE
+----------------------------------------- */
+.doc-detail-content {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.doctor-detail-box {
+    width: 60%;
+    max-width: 650px;
+    background: #f6ffff;
+    border: 2px solid #5fa7a2;
+    padding: 35px;
+    border-radius: 12px;
+    margin-bottom: 120px;
+}
+
+/* Center both buttons */
+.doc-edit-btn,
+.doc-back-btn {
+    display: block;
+    width: 200px;          /* make button small */
+    text-align: center;
+    padding: 12px 0;
+    margin: 10px auto;     /* center horizontally */
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Edit button */
+.doc-edit-btn {
+    background: #5fa7a2;
+    color: white;
+}
+
+/* Back button */
+.doc-back-btn {
+    background: #b5f4eb;
+    color: #0d5b56;
+}
+
+
+#Departments
+/* Page Background */
+.Department-page-content {
+    background: #f7fafb;
+    padding-top: 20px;
+}
+
+/* Small centered title box */
+.Dept-box {
+    width: 420px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #4a8484;
+    
+}
+
+.Dept-box h2 {
+    text-align: center;
+    color: #256b6e;
+    margin: 0;
+}
+
+/* Add Departments Box (login-style) */
+.add_department {
+    width: 420px;
+    margin: 25px auto;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    border: 2px solid#4a8484;
+    
+}
+
+.add_department h3 {
+    text-align: center;
+    color: #256b6e;
+    margin-bottom: 15px;
+}
+
+.dept-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #4a8484;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background: #26a4a4;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Departments List Box */
+.departments-section {
+    width: 500px;
+    margin: 35px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #4a8484;
+    margin-bottom:10%
+}
+
+.departments-section h3 {
+    text-align: center;
+    color: #256b6e;
+    margin-bottom: 40px;
+    margin-top:10px;
+    
+}
+
+/* Cards inside the Dept List */
+.dept-list {
+    display: flex;
+    flex-direction:column;
+    gap: 40px;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.dept-card {
+    width: 230px;
+    background: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #4a8484;
+}
+
+/* Dept name */
+.dept-card p {
+    margin-top:20px;
+    padding:5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Buttons align side-by-side */
+.dept-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Make both buttons the same size */
+.edit-btn, 
+.delete-btn {
+    width: 100px;          /* SAME WIDTH */
+    padding: 10px 0;       /* SAME HEIGHT */
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Colors */
+.edit-btn {
+    background: #26a4a4;
+    color: white;
+    width:35%;
+}
+
+.delete-btn {
+    background: #e15b5b;
+    color: white;
+    width:35%;
+}
+
+
+
+#edit-department
+.edit-dept-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;        /* keep full width */
+    padding: 40px 20px;
+}
+
+.edit-dept-box {
+    width: 60%;         /* wider box */
+    max-width: 600px;   /* do not exceed this */
+    background: #f8fdfd;
+    padding: 30px;
+    border: 2px solid #a5d6d1;
+    border-radius: 15px;
+    margin: 40px auto;  /* ✔ centers the box */
+}
+
+
+.edit-dept-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c6660;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #92c9c2;
+    outline: none;
+    
+}
+
+.edit-form input:focus {
+    background: #eafffa;
+    border-color: #2c6660;
+}
+
+.save-btn {
+    background: #2c6660;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 12px;
+    cursor: pointer;
+    
+}
+
+.save-btn:hover {
+    background: #17403c;
+}
+
+.back-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c6660;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    color: #17403c;
+    text-decoration: underline;
+}
+
+/* -------- PATIENT PAGE SIMPLE STYLING -------- */
+
+.patient-content {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.patient-box {
+    width: 90%;
+    max-width: 850px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #d9f3ee; 
+}
+
+.patient-box h2 {
+    text-align: center;
+    color: #2b746a;   
+    margin-bottom: 20px;
+}
+
+/* ----- Add Patient Form ----- */
+
+.add-patients h3 {
+    color: #2b746a;
+    margin-bottom: 10px;
+}
+
+.patient-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.patient-form input,
+.patient-form select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1.5px solid #bfe7df;   
+    background: #fafffe;
+}
+
+.patient-form input:focus,
+.patient-form select:focus {
+    outline: none;
+    border-color: #4db6ac;   
+}
+
+/* Add Button */
+.add-btn {
+    padding: 10px;
+    background: #4db6ac;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.add-btn:hover {
+    background: #3a9e92;
+}
+
+/* ----- Patient List ----- */
+
+.patients-section h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #2b746a;
+}
+
+.patient-card {
+    background: #f7fffd;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1.8px solid #c6efe5; 
+    margin-bottom: 12px;
+}
+
+.patient-card p {
+    margin: 3px 0;
+    color: #35524a;
+}
+
+/* Buttons inside patient card */
+.patients-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn {
+    background: #4db6ac;
+    padding: 6px 12px;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.edit-btn:hover {
+    background: #3a9e92;
+}
+
+.delete-btn {
+    background: #e86a68;
+    padding: 6px 12px;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #d45755;
+}
+/**EDIT PATIENT ***************/
+.edit-patient-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.edit-patient-box {
+    width: 85%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 3px solid #3a6969;
+    margin-bottom: 100px;
+}
+
+.edit-patient-box h2 {
+    text-align: center;
+    background: #d5eeee;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: #216463;
+}
+
+.edit-patient-box label {
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 15px;
+    display: block;
+    color: #1c5150;
+}
+
+.edit-patient-box input,
+.edit-patient-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #a8dcd6;
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.edit-patient-box .save-btn {
+    width: 60%;
+    margin: 25px auto 10px auto;
+    display: block;
+    background: #17665f;
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.edit-patient-box .back-btn {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    background: #c6ece8;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: #0f6462;
+    text-decoration: none;
+}
+
+
+
+#APPOINTMENTS
+.Appoint-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border: 2px solid #93d2c2;
+    border-radius: 15px;
+    
+}
+
+.appointment-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.appointment-box {
+    width: 700px;
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    border: 2px solid #93d2c2;
+    
+}
+.Appoint-Form {
+    width: 100%;
+}
+
+#Appointment-Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+#Appointment-Table thead {
+    background: #d8f2eb;
+}
+
+#Appointment-Table th {
+    padding: 12px;
+    border: 1px solid #b5e3d4;
+    text-align: left;
+    font-weight: 600;
+    color: #155e63;
+}
+
+/* Body rows */
+#Appointment-Table td {
+    padding: 12px;
+    border: 1px solid #cfe9e1;
+    font-size: 15px;
+}
+
+
+.Appoint-Form h2 {
+    text-align: center;
+    color: #155e63;
+    margin-bottom: 25px;
+}
+
+.Main-Content {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #93d2c2;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+
+.Main-Content h2 {
+    text-align: center;
+    color: #155e63;
+    margin-bottom: 25px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    color: #155e63;
+}
+
+.form-field {
+    padding: 10px;
+    border: 1px solid #86c8bc;
+    border-radius: 8px;
+    background: #f7fffc;
+    font-size: 15px;
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+button {
+    background: #155e63;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.add-appointment-container {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.add-btn {
+    background-color: #2ea8a1;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+/* SEARCH BAR******************************/
+.search-results-box {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border: 2px solid #a5d6d1;
+    border-radius: 12px;
+}
+
+.search-results-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #155e63;
+}
+
+.search-results-box h3 {
+    margin-top: 25px;
+    color: #0f645d;
 }

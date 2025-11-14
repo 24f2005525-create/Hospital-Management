@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="Adm-Content">
+    <div class="Adm-Box">
+        <h2>Admin Dashboard</h2>
+        <p class="Intro-text">Welcome back , {{session.get('name')}}!</p>
+        <div class="admin-layout">
+            <section class="overview">
+                <h3>Overview</h3>
+                <p class="line" >A quick Lookup for hospital data. </p>
+                <div class="summary">
+                    <div class="Doctor_summary">
+                        <h4>Doctors</h4>
+                        <p>{{  doctors|length  }}</p>
+                    </div>
+                    <div class="Patient_summary">
+                        <h4>Patients</h4>
+                        <p>{{  patients|length  }}</p>
+                    </div>
+                    <div class="dept_summary">
+                        <h4>Departments</h4>
+                        <p>{{  departments|length  }}</p>
+                    </div>
+                </div>
+            </section>
+            <section class="Admin-actions">
+                <h3>Manage Hospital</h3>
+                <div class="action-buttons">
+                    <a href="{{url_for('doctors_page')}}" class="action-btn">Manage Doctors</a>
+                    <a href="{{url_for('departments_page')}}" class="action-btn">Manage Departments</a>
+                    <a href="{{url_for('patients_page')}}" class="action-btn">Manage Patients</a>
+                    <a href="{{ url_for('view_appointments') }}" class="admin-button">View All Appointments</a>
+                    
+                </div>
+
+            </section>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

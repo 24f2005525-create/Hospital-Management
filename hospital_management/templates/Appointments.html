@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}All Appointments{% endblock %}
+
+{% block content %}
+<div class="Appoint-content">
+    <div class="Appoint-Form">
+        <h2>All Appointments</h2>
+        <div class="add-appointment-container">
+            <a href="{{ url_for('book_appointments') }}" class="add-btn">+ Add Appointment</a>
+        </div>
+
+        <table id="Appointment-Table">
+            <thead>
+            <tr>
+                <th>Patient</th>
+                <th>Doctor</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Reason</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for a in appointments %}
+            <tr>
+                <td>{{ a.patient_details.username }}</td>
+                <td>{{ a.doctor_details.username }}</td>
+                <td>{{ a.date }}</td>
+                <td>{{ a.time }}</td>
+                <td>{{ a.reason }}</td>
+                <td>{{ a.user_status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+{% endblock %}

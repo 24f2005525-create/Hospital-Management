@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+<div class="edit-dept-content">
+    <div class="edit-dept-box">
+
+        <h2>Edit Department</h2>
+
+        <form action="{{ url_for('update_department', dept_id=department.id) }}" method="POST" class="edit-form">
+
+            <label for="dept_name">Department Name</label>
+            <input type="text" id="dept_name" name="dept_name" value="{{ department.name }}" required>
+
+            <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+
+        <a href="{{ url_for('departments_page') }}" class="back-btn">← Back to Departments</a>
+
+    </div>
+</div>
+{% endblock %}

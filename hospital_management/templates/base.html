@@ -11,15 +11,27 @@
     <header class="header">
         <div class="title"> Hospital Management System </div>
         <div class="navigation-links">
-                <a href="{{  url_for('registration')}}">Register</a>
-                <a href="{{  url_for('profile')}}">Profile</a>
-                <a href="{{  url_for('login')}}">Login</a>  
+            {% if not session.get('name') %}
+                <a href="{{  url_for('registration')  }}">Register</a>
+                <a href="{{  url_for('login')  }}">Login</a>  
+            
+            {% elif session.get('role')=='patient' %}
+                <a href="{{  url_for('login')  }}">Login</a>
+                <a href="{{  url_for('logout')  }}">Logout</a>
+
+            {% elif session.get('role')=='admin' %}
+                <form action="{{ url_for('admin_search') }}" method="GET">
+                    <input type="text" name="q" placeholder="search..." required>
+                </form>
+            {% endif %}
                    
         </div>
 
     </header>
+    
     {% block content %}
     {% endblock %}
+    
     <footer class="footer">
         <h3>&copy; 2025 Healthcare Hospital . All Rights Reserved</h3>
     </footer>

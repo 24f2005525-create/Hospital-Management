@@ -3,7 +3,7 @@
 {% block title %}Registration Page{% endblock %}
 
 {% block content %}
-<div class="Main-Content">
+<div class="register-box">
     <div class="Form-Box">
         <form action="{{ url_for('registration') }}" method="POST">
             <h2>Register</h2>
@@ -15,7 +15,6 @@
                 <option value="" disabled selected>Select your Role</option>
                 <option value="doctor">Doctor</option>
                 <option value="patient">Patient</option>
-                <option value="admin">Admin</option>
             </select>
 
             <label for ="department">Department</label>

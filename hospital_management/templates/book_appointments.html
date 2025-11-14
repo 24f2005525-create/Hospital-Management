@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Book Appointment{% endblock %}
+
+{% block content %}
+<div class="appointment-container">
+    <div class="appointment-box">
+        <h2>Book Appointment</h2>
+        <form action="{{  url_for('book_appointments')  }}" method="POST">
+            <label for="patient_id" >Select Patient</label>
+            <select name="patient_id" id="patient_id" class="form-field" required>
+                <option value="" disabled selected>Choose Patient</option>
+            {% for p in patients %}
+                <option value="{{ p.id }}">{{ p.username }}</option>
+            {% endfor %}
+            </select>
+            <label for="doctor_id">Select Doctor</label>
+            <select name="doctor_id" id="doctor_id" class="form-field" required>
+                <option value="" disabled selected>Choose Doctor</option>
+                {% for d in doctors %}
+                    <option value="{{ d.id }}">
+                        {{ d.username }} 
+                        {% if d.department %}
+                            ({{ d.department.dept_name }})
+                        {% endif %}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" name="date" class="form-field" required>
+
+            <label for="time">Time</label>
+            <input type="time" name="time" class="form-field" required>
+
+            <label for="reason">Reason for Visit</label>
+            <textarea name="reason" rows="3" class="form-field" required></textarea>
+
+            <button type="submit">Book</button>
+            </form>
+    </div>
+</div>
+{% endblock %}
